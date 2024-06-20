@@ -1,27 +1,25 @@
 import Link from "next/link";
+import classes from "./page.module.css";
+import MealsGrid from "@/components/meals/meal-grid";
 
-export default function Community() {
+export default function MealsPage() {
   return (
-    <main>
-      <h1>Meals Page</h1>
-      <p>
-        <Link
-          href={"/meals/chicken-biryani"}
-          style={{ textDecoration: "none" }}
-        >
-          Chicken Biryani
-        </Link>
-      </p>
-      <p>
-        <Link href={"/meals/chicken-tikka"} style={{ textDecoration: "none" }}>
-          Chicken Tikka
-        </Link>
-      </p>
-      <p>
-        <Link href={"/meals/paneer-tikka"} style={{ textDecoration: "none" }}>
-          Paneer Tikka
-        </Link>
-      </p>
-    </main>
+    <>
+      <header className={classes.header}>
+        <h1>
+          Delicious meals, created
+          <span className={classes.highlight}> by you</span>
+        </h1>
+        <p>
+          Choose your favourite recipe and cook it yourself. It is easy and fun!
+        </p>
+        <p className={classes.cta}>
+          <Link href={"/meals/share"}> Share Your Favourite Recipe. </Link>
+        </p>
+      </header>
+      <main className={classes.main}>
+        <MealsGrid meals={[]} />
+      </main>
+    </>
   );
 }
