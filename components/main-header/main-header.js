@@ -1,14 +1,12 @@
-"use client";
 import Link from "next/link";
 import React from "react";
-import { usePathname } from "next/navigation";
 import logoImg from "@/assets/logo.png";
 import classes from "./main-header.module.css";
 import Image from "next/image";
 import MainHeaderBackground from "./main-header-background";
+import NavLink from "./nav-link";
 
 function Header() {
-  const path = usePathname();
   return (
     <>
       <MainHeaderBackground />
@@ -21,20 +19,10 @@ function Header() {
         <nav className={classes.nav}>
           <ul>
             <li>
-              <Link
-                href={"/meals"}
-                className={path.startsWith("/meals") && classes.active} // here we use startsWith we have /meals/share nested path 
-              >
-                Browse Meals
-              </Link>
+              <NavLink href={"/meals"}> Browse Meals</NavLink>
             </li>
             <li>
-              <Link
-                href={"/community"}
-                className={path === "/community" && classes.active}
-              >
-                Foodie Community
-              </Link>
+              <NavLink href={"/community"}> Foodie Community</NavLink>
             </li>
           </ul>
         </nav>

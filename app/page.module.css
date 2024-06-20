@@ -1,6 +1,7 @@
 .header {
   display: flex;
-  gap: 3rem;
+  align-items: center;
+  gap: 2rem;
   margin: 3rem auto;
   width: 90%;
   max-width: 75rem;
@@ -19,7 +20,7 @@
 .hero h1 {
   font-size: 2rem;
   font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   letter-spacing: 0.15rem;
   text-transform: uppercase;
   background: linear-gradient(90deg, #f9572a, #ffc905);
@@ -36,7 +37,7 @@
 
 .cta a {
   display: inline-block;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   background: linear-gradient(90deg, #f9572a, #ff9b05);
@@ -47,7 +48,7 @@
 
 .cta a:hover,
 .cta a:active {
-  background: linear-gradient(90deg, #fd4715, #f9b241);
+  background: linear-gradient(90deg, #fc5527, #ffbc50);
 }
 
 .cta a:first-child {
